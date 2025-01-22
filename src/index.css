@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  box-sizing: border-box;
+  /* font-family: "poppins", sans-serif; */
+
+}
+
+body {
+  background: linear-gradient(180deg, #ffc4fb, #aeccff, #f9c4f6);
+  /* background: linear-gradient(180deg, #f9e8f9, #c0d8f8, #f0c8e8); */
+  /* background: linear-gradient(180deg, #fbe4e6, #d9b0e3, #b48cdf); */
+  /* background: linear-gradient(180deg, #d8e8f7, #94b6d8, #6d8fc4); */
+  /* background: linear-gradient(180deg, #fbe4e6, #d9b0e3, #b48cdf), rgba(255, 255, 255, 0.1); */
+  /* background: linear-gradient(135deg, #d09cf3, #8dc0f7, #d09cf3, #8dc0f7); */
+  background-size: 400% 400%;
+  animation: gradientMove 5s infinite ease-in-out;
+
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+
+  color: #202124;
+  /* Dark gray for professional text contrast */
+  font-family: 'Poppins', sans-serif;
+  /* Clean, modern typography */
+
+
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 50% 75%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 50% 25%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

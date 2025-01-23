@@ -20,7 +20,7 @@ const IntroSection = () => {
 			<section className="intro-section">
 				<div className="intro-container">
 					<div className="intro-content">
-						<h1 className="intro-title">Techland IT Solutions</h1>
+						<h1 className="intro-title">Welcome to Techland IT Solutions</h1>
 						<p className="intro-description">
 							Techland IT Solutions, based in Hyderabad, is a premier provider of digital solutions tailored to empower businesses.
 							Our expertise spans mobile app development, web development, e-commerce, digital marketing, and UI/UX design.

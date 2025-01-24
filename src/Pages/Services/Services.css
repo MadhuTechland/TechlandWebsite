@@ -344,3 +344,145 @@
         flex-direction: column;
     }
 }
+@media (max-width: 1024px) {
+    .services-title {
+        font-size: 2.2rem;
+    }
+    
+    .services-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-card {
+        max-width: 250px;
+        margin: 1rem;
+    }
+
+    .detailservice-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .detailservice-card {
+        padding: 20px;
+    }
+
+    .detailservice-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .detailservice-card img {
+        height: 120px;
+    }
+
+    .workflow {
+        flex-wrap: wrap;
+    }
+
+    .workflow-step {
+        width: 200px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .detailservice-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .detailservice-card {
+        padding: 15px;
+    }
+
+    .detailservice-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .detailservice-card img {
+        height: 100px;
+    }
+
+    .workflow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .workflow-step {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .workflow-step h3 {
+        font-size: 1.2rem;
+    }
+
+    .step-content p {
+        font-size: 0.9rem;
+    }
+
+    .arrow {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+        font-size: 1.8rem;
+    }
+
+    .services-subtitle {
+        font-size: 1rem;
+    }
+
+    .services-grid {
+        flex-direction: column;
+    }
+
+    .service-card {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .detailservice-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .detailservice-card {
+        padding: 10px;
+    }
+
+    .detailservice-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .detailservice-card img {
+        height: 90px;
+    }
+
+    .workflow-step {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .workflow-step h3 {
+        font-size: 1.1rem;
+    }
+
+    .arrow {
+        font-size: 1.8rem;
+    }
+}

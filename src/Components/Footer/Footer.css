@@ -199,3 +199,9 @@
 
   /* You can change the color to suit your design */
 }
+@media (max-width: 768px) {
+  .footer-map{
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -53,3 +53,59 @@
     width: 130%;
     border-radius: 0 10px 10px 0;
 }
+@media (max-width: 768px) {
+    .socialredes {
+        width: 60px; 
+    }
+
+    .socialredes a {
+        width: 50%; 
+        height: 50px; 
+    }
+
+    .socialredes a svg {
+        width: 25px; 
+    }
+
+    .socialredes .socialinsta {
+        border-radius: 0 0 8px 0;
+    }
+
+    .socialredes .sociallinkedin {
+        border-radius: 0 8px 0 0;
+    }
+
+    .socialredes .socialgithub {
+        border-radius: 8px;
+    }
+
+    .socialredes .socialtwitter {
+        border-radius: 8px;
+    }
+
+    .socialredes .socialwhatsapp {
+        border-radius: 8px;
+    }
+
+    .socialredes .socialphone {
+        border-radius: 8px;
+    }
+
+    .socialredes a:hover {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .socialredes {
+        width: 50px; 
+    }
+
+    .socialredes a {
+        width: 45%; 
+        height: 45px; 
+    }
+    .socialredes a svg {
+        width: 20px; 
+    }
+}

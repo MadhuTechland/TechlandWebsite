@@ -128,7 +128,7 @@ const Footer = () => {
 
 								</div>
 							</div>
-							<div style={{ display: 'flex', gap: '10%' }}>
+							<div className='footer-map' style={{ display: 'flex', gap: '10%' }}>
 								<div className="working-hours" style={{ width: '100%', height: '100%', marginTop: '20px' }}>
 									<h3>Find Us</h3>
 									<div className="gmap_canvas">

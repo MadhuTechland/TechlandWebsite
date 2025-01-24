@@ -265,3 +265,84 @@
 .intro-container button:active .intro-button-text {
   color: rgba(255, 255, 255, 0.459);
 }
+@media (max-width: 1200px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-content {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+  }
+
+  .intro-video {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 20px 10px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-title {
+    font-size: 1.5rem;
+  }
+
+  .intro-description {
+    font-size: 0.9rem;
+  }
+
+  .intro-services li {
+    font-size: 0.9rem;
+  }
+
+  .intro-video {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .intro-button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-title {
+    font-size: 1.2rem;
+  }
+
+  .intro-description {
+    font-size: 0.8rem;
+  }
+
+  .intro-services li {
+    font-size: 0.8rem;
+  }
+
+  .intro-video {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .intro-button {
+    font-size: 0.8rem;
+    padding: 10px 18px;
+  }
+}

@@ -11,11 +11,7 @@
 
 body {
   background: linear-gradient(180deg, #ffc4fb, #aeccff, #f9c4f6);
-  /* background: linear-gradient(180deg, #f9e8f9, #c0d8f8, #f0c8e8); */
-  /* background: linear-gradient(180deg, #fbe4e6, #d9b0e3, #b48cdf); */
-  /* background: linear-gradient(180deg, #d8e8f7, #94b6d8, #6d8fc4); */
-  /* background: linear-gradient(180deg, #fbe4e6, #d9b0e3, #b48cdf), rgba(255, 255, 255, 0.1); */
-  /* background: linear-gradient(135deg, #d09cf3, #8dc0f7, #d09cf3, #8dc0f7); */
+  position: relative;
   background-size: 400% 400%;
   animation: gradientMove 5s infinite ease-in-out;
 
@@ -30,11 +26,14 @@ body {
 
 
 }
-body, html {
+
+body,
+html {
   width: 100%;
   height: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
+
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -55,4 +54,44 @@ body, html {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.progress-bar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff00ee, #0056e7, #ff00ee);
+  /* Blue color */
+  z-index: 9999;
+  width: 0;
+  transition: width 0.1s ease;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* Smooth width transition */
+}
+
+/* Scrollbar container */
+body::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scrollbar */
+  height: 12px;
+  /* Height of horizontal scrollbar */
+}
+
+/* Scrollbar track (background) */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Scrollbar thumb (the part you drag) */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Scrollbar thumb on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

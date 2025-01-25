@@ -20,37 +20,43 @@ const IntroSection = () => {
 			<section className="intro-section">
 				<div className="intro-container">
 					<div className="intro-content">
-						<h1 className="intro-title">Welcome to Techland IT Solutions</h1>
+						<h1 className="intro-title">Transforming Ideas into Digital Excellence</h1>
 						<p className="intro-description">
-							Techland IT Solutions, based in Hyderabad, is a premier provider of digital solutions tailored to empower businesses.
-							Our expertise spans mobile app development, web development, e-commerce, digital marketing, and UI/UX design.
-							We are dedicated to delivering high-quality, innovative, and client-centric services that elevate your digital presence.
+							Empowering businesses with cutting-edge technology solutions in
+							App Development, Flutter Development, Digital Marketing, UI/UX Design, Web
+							Development, and E-Commerce Solutions
 						</p>
-						<ul className="intro-services">
+						{/* <ul className="intro-services">
 							<li>✔ Mobile App Development</li>
 							<li>✔ Flutter & Cross-Platform Development</li>
 							<li>✔ E-Commerce Solutions</li>
 							<li>✔ Web Development</li>
 							<li>✔ Digital Marketing (SEO, PPC, GMB)</li>
 							<li>✔ Intuitive UI/UX Design</li>
-						</ul>
-						<button class="intro-learn-more">
-							<span class="intro-circle" aria-hidden="true">
-								<span class="intro-icon intro-arrow"></span>
+						</ul> */}
+						<button className="intro-learn-more" style={{ marginRight: 5, marginBottom: 5 }} onClick={() => window.location.href = '/services'} >
+							<span className="intro-circle" aria-hidden="true">
+								<span className="intro-icon intro-arrow"></span>
 							</span>
-							<span class="intro-button-text">Learn More</span>
-						</button>
+							<span className="intro-button-text">Explore Our Services</span>
+						</button >
+						<button className="intro-learn-more" onClick={() => window.location.href = '/contact'}>
+							<span className="intro-circle" aria-hidden="true">
+								<span className="intro-icon intro-arrow"></span>
+							</span>
+							<span className="intro-button-text">Get in Touch</span>
+						</button >
 
-					</div>
+					</div >
 
-					{/* <div class="morphing-box"> */}
-					<video src={intrologo} width="50%" autoPlay loop muted style={{ mixBlendMode: 'multiply' }}>
-					</video>
+					{/* <div className="morphing-box"> */}
+					< video src={intrologo} width="50%" autoPlay loop muted style={{ mixBlendMode: 'multiply' }}>
+					</video >
 
 					{/* </div> */}
 
-				</div>
-			</section>
+				</div >
+			</section >
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
 				<defs>
 					<linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">

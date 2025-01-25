@@ -80,11 +80,15 @@ const Services = () => {
 				</span>
 
 				<div className="unique-card-container"
-					onMouseEnter={() => cancelAnimationFrame(animationFrame.current)}
-					onMouseLeave={() => (animationFrame.current = requestAnimationFrame(scrollCards))}
 					ref={cardContainerRef}>
 					{services.map((service, index) => (
-						<div key={index} className="unique-card">
+						<div key={index} className="unique-card"
+
+							onMouseEnter={() => cancelAnimationFrame(animationFrame.current)}
+							onMouseLeave={() => (animationFrame.current = requestAnimationFrame(scrollCards))}
+							onTouchStart={() => cancelAnimationFrame(animationFrame.current)}
+							onTouchEnd={() => (animationFrame.current = requestAnimationFrame(scrollCards))}
+						>
 							<img src={service.icon} alt={service.title} className="service-icon" />
 							<h3 className="service-title">{service.title}</h3>
 							<p className="service-description">{service.description}</p>

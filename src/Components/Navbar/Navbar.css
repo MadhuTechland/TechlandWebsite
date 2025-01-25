@@ -164,7 +164,7 @@
 
 .nav-item {
   display: block;
-  text-align: center;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {

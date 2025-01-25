@@ -7,9 +7,9 @@ const About = () => {
         <div className="row">
 
           <div className="col-lg-6">
-            <div class="about-content mb-50">
-              <div class="section-title mb-50">
-                <h1 class="mb-25">Read more about our Digital Agency</h1>
+            <div className="about-content mb-50">
+              <div className="section-title mb-50">
+                <h1 className="mb-25">Read more about our Digital Agency</h1>
                 <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed
                   diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -17,52 +17,52 @@ const About = () => {
                   justo duo dolores.
                 </p>
               </div>
-              <div class="accordion pb-15" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div className="accordion pb-15" id="accordionExample">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingOne">
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Which Service We Provide?
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                  <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" >
+                    <div className="accordion-body" >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
                       accusamus terry richardson ad squid. 3 wolf moon officia
                       aute, non cupidatat skateboard dolor brunch.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      What I need to start design?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    </div >
+                  </div >
+                </div >
+                <div className="accordion-item" >
+                  <h2 className="accordion-header" id="headingOne" >
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                      What I need to start design ?
+                    </button >
+                  </h2 >
+                  <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" >
+                    <div className="accordion-body" >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
                       accusamus terry richardson ad squid. 3 wolf moon officia
                       aute, non cupidatat skateboard dolor brunch.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      What is our design process?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    </div >
+                  </div >
+                </div >
+                <div className="accordion-item" >
+                  <h2 className="accordion-header" id="headingOne" >
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                      What is our design process ?
+                    </button >
+                  </h2 >
+                  <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" >
+                    <div className="accordion-body" >
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
                       accusamus terry richardson ad squid. 3 wolf moon officia
                       aute, non cupidatat skateboard dolor brunch.
-                    </div>
-                  </div>
-                </div>
-                {/* <div class="single-faq">
+                    </div >
+                  </div >
+                </div >
+                {/* <div className="single-faq">
                   <button
-                    class="w-100 text-start"
+                    className="w-100 text-start"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
@@ -74,20 +74,20 @@ const About = () => {
 
                   <div
                     id="collapseOne"
-                    class="collapse show"
+                    className="collapse show"
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="faq-content">
+                    <div className="faq-content">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
                       accusamus terry richardson ad squid. 3 wolf moon officia
                       aute, non cupidatat skateboard dolor brunch.
                     </div>
                   </div>
                 </div> */}
-                {/* <div class="single-faq">
+                {/* <div className="single-faq">
                   <button
-                    class="w-100 text-start collapsed"
+                    className="w-100 text-start collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo"
@@ -98,20 +98,20 @@ const About = () => {
                   </button>
                   <div
                     id="collapseTwo"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="faq-content">
+                    <div className="faq-content">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
                       accusamus terry richardson ad squid. 3 wolf moon officia
                       aute, non cupidatat skateboard dolor brunch.
                     </div>
                   </div>
                 </div> */}
-                {/* <div class="single-faq">
+                {/* <div className="single-faq">
                   <button
-                    class="w-100 text-start collapsed"
+                    className="w-100 text-start collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseThree"
@@ -122,26 +122,26 @@ const About = () => {
                   </button>
                   <div
                     id="collapseThree"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="faq-content">
+                    <div className="faq-content">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life
                       accusamus terry richardson ad squid. 3 wolf moon officia
                       aute, non cupidatat skateboard dolor brunch.
                     </div>
                   </div>
                 </div> */}
-              </div>
-              <a href='test' class="main-btn btn-hover">
+              </div >
+              <a href='test' className="main-btn btn-hover" >
                 View More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              </a >
+            </div >
+          </div >
+        </div >
+      </div >
+    </section >
   );
 };
 

@@ -1,8 +1,14 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import "./Projects.css";
-import phoneImg1 from '../../Components/Assets/phoneImg1.jpeg'
-import phoneImg2 from '../../Components/Assets/phoneImg2.jpeg'
-import phoneImg3 from '../../Components/Assets/phoneImg3.jpeg'
+import phoneImg1 from '../../Components/Assets/Projectimg/project1.png'
+import phoneImg2 from '../../Components/Assets/Projectimg/project2.png'
+import phoneImg3 from '../../Components/Assets/Projectimg/project3.png'
+import phoneImg4 from '../../Components/Assets/Projectimg/project4.png'
+import phoneImg5 from '../../Components/Assets/Projectimg/project5.png'
+import phoneImg6 from '../../Components/Assets/Projectimg/project6.png'
+import phoneImg7 from '../../Components/Assets/Projectimg/project7.png'
+
+
 import pcImg1 from '../../Components/Assets/techland.png'
 import pcImg2 from '../../Components/Assets/trustlab.png'
 import pcImg3 from '../../Components/Assets/salespulse.png'
@@ -13,15 +19,11 @@ const Projects = () => {
         { name: "Trust Labs", logo: phoneImg1, },
         { name: "Client Two", logo: phoneImg2, },
         { name: "Client Three", logo: phoneImg3, },
-        { name: "Client Four", logo: phoneImg1, },
-        { name: "Trust Labs", logo: phoneImg2, },
-        { name: "Client Two", logo: phoneImg3, },
-        { name: "Client Three", logo: phoneImg1, },
-        { name: "Client Four", logo: phoneImg2, },
-        { name: "Trust Labs", logo: phoneImg3, },
-        { name: "Client Two", logo: phoneImg1, },
-        { name: "Client Three", logo: phoneImg2, },
-        { name: "Client Four", logo: phoneImg3, },
+        { name: "Client Four", logo: phoneImg4, },
+        { name: "Trust Labs", logo: phoneImg5, },
+        { name: "Client Two", logo: phoneImg6, },
+        { name: "Client Three", logo: phoneImg7, },
+
     ];
     const pcProjects = [
         { name: "Trust Labs", logo: pcImg1, },
@@ -99,6 +101,10 @@ const Projects = () => {
                     onMouseEnter={() => cancelAnimationFrame(animationFrameClients.current)}
                     onMouseLeave={() => (animationFrameClients.current = requestAnimationFrame(() =>
                         scrollContent(cardContainerRef, animationFrameClients, scrollAmountClients, scrollBackClients)))}
+                    onTouchStart={() => cancelAnimationFrame(animationFrameClients.current)}
+                    onTouchEnd={() => (animationFrameClients.current = requestAnimationFrame(() =>
+                        scrollContent(cardContainerRef, animationFrameClients, scrollAmountClients, scrollBackClients)))}
+
                     ref={cardContainerRef}
                 >
                     {moblieProjects.map((client, index) => (
@@ -119,6 +125,9 @@ const Projects = () => {
                     className="project-grid"
                     onMouseEnter={() => cancelAnimationFrame(animationFrameTestimonials.current)}
                     onMouseLeave={() => (animationFrameTestimonials.current = requestAnimationFrame(() =>
+                        scrollContent(testimonialContainerRef, animationFrameTestimonials, scrollAmountTestimonials, scrollBackTestimonials)))}
+                    onTouchStart={() => cancelAnimationFrame(animationFrameTestimonials.current)}
+                    onTouchEnd={() => (animationFrameTestimonials.current = requestAnimationFrame(() =>
                         scrollContent(testimonialContainerRef, animationFrameTestimonials, scrollAmountTestimonials, scrollBackTestimonials)))}
                     ref={testimonialContainerRef}
                 >

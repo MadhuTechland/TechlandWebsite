@@ -76,7 +76,7 @@
 }
 
 .copy-right {
-  text-align: center;
+  text-align: justify;
   margin-top: 40px;
   font-size: 14px;
   /* color: #aaa; */
@@ -199,9 +199,21 @@
 
   /* You can change the color to suit your design */
 }
+
 @media (max-width: 768px) {
-  .footer-map{
+  .footer-map {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .container {
+
+    padding: 25px 35px;
+  }
+
+  .working-hours {
+    width: 100% !important;
   }
 }

@@ -313,9 +313,7 @@ const DetailedServices = () => {
             <div className="detailservice-header">
                 <h1>Our Services</h1>
                 <p>
-                    At Techland IT Solutions, we provide a wide range of IT services to
-                    cater to businesses of all sizes. Here’s what we offer:
-                </p>
+                    At Techland IT Solutions, we offer a comprehensive range of services designed to meet the diverse needs of businesses in the digital age. Our team of experts delivers high-quality, innovative solutions tailored to your goals, ensuring your business remains ahead of the competition.                </p>
             </div>
             <div className="detailservice-grid">
                 {servicesData.map((service, index) => (

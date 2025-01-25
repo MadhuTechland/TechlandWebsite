@@ -102,6 +102,10 @@ const Clients = () => {
 					onMouseEnter={() => cancelAnimationFrame(animationFrameClients.current)}
 					onMouseLeave={() => (animationFrameClients.current = requestAnimationFrame(() =>
 						scrollContent(cardContainerRef, animationFrameClients, scrollAmountClients, scrollBackClients)))}
+					onTouchStart={() => cancelAnimationFrame(animationFrameClients.current)}
+					onTouchEnd={() => (animationFrameClients.current = requestAnimationFrame(() =>
+						scrollContent(cardContainerRef, animationFrameClients, scrollAmountClients, scrollBackClients)))}
+
 					ref={cardContainerRef}
 				>
 					{clients.map((client, index) => (
@@ -118,6 +122,9 @@ const Clients = () => {
 						className="testimonial-grid"
 						onMouseEnter={() => cancelAnimationFrame(animationFrameTestimonials.current)}
 						onMouseLeave={() => (animationFrameTestimonials.current = requestAnimationFrame(() =>
+							scrollContent(testimonialContainerRef, animationFrameTestimonials, scrollAmountTestimonials, scrollBackTestimonials)))}
+						onTouchStart={() => cancelAnimationFrame(animationFrameTestimonials.current)}
+						onTouchEnd={() => (animationFrameTestimonials.current = requestAnimationFrame(() =>
 							scrollContent(testimonialContainerRef, animationFrameTestimonials, scrollAmountTestimonials, scrollBackTestimonials)))}
 						ref={testimonialContainerRef}
 					>

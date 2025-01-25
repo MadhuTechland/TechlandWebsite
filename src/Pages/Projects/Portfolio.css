@@ -1,6 +1,6 @@
 /* Portfolio Section */
 .portfolio-container {
-    padding: 50px 20px;
+    padding: 50px 45px;
     /* font-family: "Arial", sans-serif; */
 }
 
@@ -213,6 +213,7 @@
 .carousel-container:hover img {
     height: auto;
 }
+
 @media (max-width: 768px) {
     .portfolio-container {
         padding: 30px 15px;
@@ -225,10 +226,12 @@
     .portfolio-header p {
         font-size: 1rem;
     }
-    .portfolio-categories{
+
+    .portfolio-categories {
         display: flex;
         flex-direction: column;
     }
+
     .portfolio-card {
         width: 90%;
     }
@@ -248,9 +251,17 @@
     .project-stat p {
         font-size: 1rem;
     }
+
+    .carousel-container .carousel-btn {
+        display: initial;
+    }
 }
 
 @media (max-width: 480px) {
+    .portfolio-container {
+        padding: 30px 35px;
+    }
+
     .portfolio-header h1 {
         font-size: 1.5rem;
     }

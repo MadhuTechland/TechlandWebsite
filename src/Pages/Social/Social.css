@@ -1,5 +1,5 @@
 .socialredes {
-    width: 80px;
+
     height: auto;
     display: flex;
     flex-direction: column;
@@ -7,13 +7,16 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
+
 }
+
+
 
 .socialredes a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 48px;
     height: 55px;
     transition: all 0.2s ease-in-out;
 }
@@ -50,62 +53,30 @@
 }
 
 .socialredes a:hover {
-    width: 130%;
+    width: 98px;
     border-radius: 0 10px 10px 0;
 }
+
 @media (max-width: 768px) {
-    .socialredes {
-        width: 60px; 
-    }
 
     .socialredes a {
-        width: 50%; 
-        height: 50px; 
+        width: 35px;
     }
 
     .socialredes a svg {
-        width: 25px; 
+        width: 25px;
     }
 
-    .socialredes .socialinsta {
-        border-radius: 0 0 8px 0;
-    }
 
-    .socialredes .sociallinkedin {
-        border-radius: 0 8px 0 0;
-    }
-
-    .socialredes .socialgithub {
-        border-radius: 8px;
-    }
-
-    .socialredes .socialtwitter {
-        border-radius: 8px;
-    }
-
-    .socialredes .socialwhatsapp {
-        border-radius: 8px;
-    }
-
-    .socialredes .socialphone {
-        border-radius: 8px;
-    }
 
     .socialredes a:hover {
-        width: 100%; 
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .socialredes {
-        width: 50px; 
-    }
 
-    .socialredes a {
-        width: 45%; 
-        height: 45px; 
-    }
     .socialredes a svg {
-        width: 20px; 
+        width: 20px;
     }
 }

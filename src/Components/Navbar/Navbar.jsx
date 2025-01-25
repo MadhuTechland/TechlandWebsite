@@ -12,6 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     if (showgetQuote) {
       window.scrollTo(0, 0);
+      document.body.scrollTo(0, 0)
       document.body.style.overflow = "hidden";
     } else document.body.style.overflow = "";
 
@@ -20,6 +21,8 @@ const Navbar = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.body.scrollTo(0, 0)
+    setIsMenuOpen(false)
   }, [scrolltoTop]);
 
   return (
@@ -100,8 +103,12 @@ const Navbar = () => {
                 </button>
               </li>
             </ul>
+
           </nav>
+          <div id="progressBar" className="progress-bar"></div>
+
         </div>
+
       </header>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
         <defs>

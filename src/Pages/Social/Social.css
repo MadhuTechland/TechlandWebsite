@@ -1,5 +1,5 @@
 .socialredes {
-    width: 80px;
+
     height: auto;
     display: flex;
     flex-direction: column;
@@ -7,13 +7,16 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
+
 }
+
+
 
 .socialredes a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 48px;
     height: 55px;
     transition: all 0.2s ease-in-out;
 }
@@ -50,6 +53,30 @@
 }
 
 .socialredes a:hover {
-    width: 130%;
+    width: 98px;
     border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 768px) {
+
+    .socialredes a {
+        width: 35px;
+    }
+
+    .socialredes a svg {
+        width: 25px;
+    }
+
+
+
+    .socialredes a:hover {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .socialredes a svg {
+        width: 20px;
+    }
 }

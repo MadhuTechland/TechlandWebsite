@@ -3,9 +3,13 @@ import "./Portfolio.css";
 import pcImg1 from '../../Components/Assets/techland.png';
 import pcImg2 from '../../Components/Assets/trustlab.png';
 import pcImg3 from '../../Components/Assets/salespulse.png';
-import phoneImg1 from '../../Components/Assets/phoneImg1.jpeg'
-import phoneImg2 from '../../Components/Assets/phoneImg2.jpeg'
-import phoneImg3 from '../../Components/Assets/phoneImg3.jpeg'
+import phoneImg1 from '../../Components/Assets/Projectimg/project1.png'
+import phoneImg2 from '../../Components/Assets/Projectimg/project2.png'
+import phoneImg3 from '../../Components/Assets/Projectimg/project3.png'
+import phoneImg4 from '../../Components/Assets/Projectimg/project4.png'
+import phoneImg5 from '../../Components/Assets/Projectimg/project5.png'
+import phoneImg6 from '../../Components/Assets/Projectimg/project6.png'
+import phoneImg7 from '../../Components/Assets/Projectimg/project7.png'
 
 const Portfolio = () => {
     const [counts, setCounts] = useState([0, 0, 0, 0]);
@@ -15,10 +19,10 @@ const Portfolio = () => {
 
     const projectStats = useMemo(() => {
         return [
-            { label: "Web Development Projects", value: 200 },
-            { label: "Mobile Apps Delivered", value: 150 },
-            { label: "Digital Marketing Campaigns", value: 50 },
-            { label: "Global Clients Served", value: 300 },
+            { label: "Mobile Apps Delivered", value: 156 },
+            { label: "Web Development Projects", value: 94 },
+            { label: "Digital Marketing Campaigns", value: 52 },
+            { label: "Global Clients Served", value: 350 },
         ]
     }, []);
 
@@ -30,9 +34,9 @@ const Portfolio = () => {
             category: "Web Development",
         },
         {
-            title: "Mobile Banking App",
+            title: "Mobile  App",
             description: "A secure and user-friendly mobile banking solution.",
-            images: [phoneImg1, phoneImg2, phoneImg3],
+            images: [phoneImg1, phoneImg2, phoneImg3, phoneImg4, phoneImg5, phoneImg6, phoneImg7],
             category: "Mobile App Development",
         },
         {
@@ -41,16 +45,11 @@ const Portfolio = () => {
             images: [pcImg3, pcImg1],
             category: "Digital Marketing",
         },
-        {
-            title: "AI-Powered Analytics Tool",
-            description: "An innovative tool providing actionable business insights.",
-            images: [pcImg1],
-            category: "Web Development",
-        },
+
         {
             title: "Food Delivery App",
             description: "A seamless food delivery solution for restaurants and users.",
-            images: [pcImg2],
+            images: [phoneImg4, phoneImg5, phoneImg6, phoneImg7],
             category: "Mobile App Development",
         },
     ];
@@ -122,8 +121,8 @@ const Portfolio = () => {
         <section className="portfolio-container">
             {/* Portfolio Section */}
             <div className="portfolio-header">
-                <h1>Our Portfolio</h1>
-                <p>Explore some of the amazing projects we’ve delivered for our clients.</p>
+                <h1>Our Work Speaks Volumes</h1>
+                <p>At Techland IT Solutions, we take pride in our track record of delivering innovative and impactful solutions across multiple industries. Each project we undertake reflects our commitment to excellence and our dedication to helping businesses thrive in the digital age. Below are some of the successful projects we've delivered:</p>
             </div>
 
             {/* Categories */}
@@ -193,7 +192,7 @@ const Portfolio = () => {
                 <div className="project-stats">
                     {projectStats.map((stat, index) => (
                         <div key={index} className="project-stat">
-                            <h2>{counts[index]}</h2>
+                            <h2>{counts[index]}+</h2>
                             <p>{stat.label}</p>
                         </div>
                     ))}

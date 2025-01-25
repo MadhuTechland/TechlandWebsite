@@ -5,10 +5,10 @@ const Contact = () => {
     return (
         <>
             <div className='contact-title-header'>
-                <h1 className="contact-title">Contact Us</h1>
-                <p className="contact-content">We'd love to hear from you! Whether you have a question,
-                    feedback, or just want to say hello, our team is here to assist you. Feel free
-                    to reach out to us through the <span>CONTACT FORM</span></p>
+                <h1 className="contact-title">Ready to Start Your Digital Journey?</h1>
+                <p className="contact-content">We’d love to hear from you! Whether you have inquiries about our services or need a tailored solution for your business, our team is here to help.
+
+                    Reach out to us today, and let’s discuss how we can drive your business forward with innovative and scalable technology solutions.</p>
 
             </div>
             <div className="contact-container-fluid">

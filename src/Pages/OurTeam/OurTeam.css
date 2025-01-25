@@ -72,3 +72,10 @@
 .team-social a:hover {
     color: #0056b3;
 }
+
+@media (max-width: 480px) {
+
+    .team-section {
+        padding: 50px 30px;
+    }
+}

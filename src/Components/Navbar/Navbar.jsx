@@ -5,93 +5,70 @@ import "./Navbar.css";
 import QuickContact from "../../Pages/Contact/QuickContact";
 
 const Navbar = () => {
-  const [showgetQuote, setShowgetQuote] = useState(false)
-  const [scrolltoTop, setscrolltoTop] = useState(false)
+  const [showgetQuote, setShowgetQuote] = useState(false);
+  const [scrolltoTop, setscrolltoTop] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     if (showgetQuote) {
       window.scrollTo(0, 0);
+      document.body.scrollTo(0, 0)
       document.body.style.overflow = "hidden";
-    } else
-      document.body.style.overflow = "";
+    } else document.body.style.overflow = "";
 
     return () => document.body.style.overflow = "";
-  }, [showgetQuote])
+  }, [showgetQuote]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [scrolltoTop])
+    document.body.scrollTo(0, 0)
+    setIsMenuOpen(false)
+  }, [scrolltoTop]);
+
   return (
     <>
       <div style={{ height: "76px" }}></div>
       <header className="header">
         <div className="navbar-area">
-
-
-          <nav className="navbarcontainer" >
+          <nav className="navbarcontainer">
             <NavLink className="navbar-brand" to="/">
               <img src={logo} alt="Logo" />
             </NavLink>
 
+            <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(prev => !prev)}>
+              <span className="line"></span>
+              <span className="line"></span>
+              <span className="line"></span>
+            </div>
 
-
-            <ul id="nav" className="navbar-nav ms-auto">
-              <li className="nav-item" onClick={() => setscrolltoTop(prve => (!prve))}>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  to="/"
-                >
+            <ul id="nav" className={`navbar-nav ms-auto ${isMenuOpen ? 'open' : ''}`}>
+              <li className="nav-item" onClick={() => setscrolltoTop(prev => !prev)}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/">
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item" onClick={() => setscrolltoTop(prve => (!prve))}>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  to="/about"
-                >
+              <li className="nav-item" onClick={() => setscrolltoTop(prev => !prev)}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/about">
                   About us
                 </NavLink>
               </li>
-              <li className="nav-item" onClick={() => setscrolltoTop(prve => (!prve))}>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  to="/services"
-                >
+              <li className="nav-item" onClick={() => setscrolltoTop(prev => !prev)}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/services">
                   Services
                 </NavLink>
               </li>
-              <li className="nav-item" onClick={() => setscrolltoTop(prve => (!prve))}>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  to="/portfolio"
-                >
+              <li className="nav-item" onClick={() => setscrolltoTop(prev => !prev)}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/portfolio">
                   Portfolio
                 </NavLink>
               </li>
-              <li className="nav-item" onClick={() => setscrolltoTop(prve => (!prve))}>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  to="/team"
-                >
+              <li className="nav-item" onClick={() => setscrolltoTop(prev => !prev)}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/team">
                   Our Team
                 </NavLink>
               </li>
-              <li className="nav-item" onClick={() => setscrolltoTop(prve => (!prve))}>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  to="/contact"
-                >
+              <li className="nav-item" onClick={() => setscrolltoTop(prev => !prev)}>
+                <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/contact">
                   Contact Us
                 </NavLink>
               </li>
@@ -103,19 +80,12 @@ const Navbar = () => {
                   onClick={() => setShowgetQuote(true)}
                 >
                   <span className="custom-button__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="custom-button__icon-svg"
-                      width="10"
-                    >
+                    <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="custom-button__icon-svg" width="10">
                       <path
                         d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
                         fill="currentColor"
                       ></path>
                     </svg>
-
                     <svg
                       viewBox="0 0 14 15"
                       fill="none"
@@ -135,9 +105,10 @@ const Navbar = () => {
             </ul>
 
           </nav>
-
+          <div id="progressBar" className="progress-bar"></div>
 
         </div>
+
       </header>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
         <defs>
@@ -150,7 +121,6 @@ const Navbar = () => {
         <path d="M0 0v99.7C62 69 122.4 48.7 205 66c83.8 17.6 160.5 20.4 240-12 54-22 110-26 173-10a392.2 392.2 0 0 0 222-5c55-17 110.3-36.9 160-27.2V0H0Z" opacity=".5" fill="url(#grad3)"></path>
         <path d="M0 0v74.7C62 44 122.4 28.7 205 46c83.8 17.6 160.5 25.4 240-7 54-22 110-21 173-5 76.5 19.4 146.5 23.3 222 0 55-17 110.3-31.9 160-22.2V0H0Z" fill="url(#grad3)"></path>
       </svg>
-
 
       {showgetQuote ? <QuickContact close={() => { if (showgetQuote) setShowgetQuote(false) }} /> : null}
     </>

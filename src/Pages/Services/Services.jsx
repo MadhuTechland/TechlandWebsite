@@ -87,7 +87,7 @@ const Services = () => {
 							onMouseEnter={() => cancelAnimationFrame(animationFrame.current)}
 							onMouseLeave={() => (animationFrame.current = requestAnimationFrame(scrollCards))}
 							onTouchStart={() => cancelAnimationFrame(animationFrame.current)}
-							onTouchEnd={() => (animationFrame.current = requestAnimationFrame(scrollCards))}
+						// onTouchEnd={() => (animationFrame.current = requestAnimationFrame(scrollCards))}
 						>
 							<img src={service.icon} alt={service.title} className="service-icon" />
 							<h3 className="service-title">{service.title}</h3>

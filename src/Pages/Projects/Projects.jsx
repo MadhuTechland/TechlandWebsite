@@ -102,8 +102,8 @@ const Projects = () => {
                     onMouseLeave={() => (animationFrameClients.current = requestAnimationFrame(() =>
                         scrollContent(cardContainerRef, animationFrameClients, scrollAmountClients, scrollBackClients)))}
                     onTouchStart={() => cancelAnimationFrame(animationFrameClients.current)}
-                    onTouchEnd={() => (animationFrameClients.current = requestAnimationFrame(() =>
-                        scrollContent(cardContainerRef, animationFrameClients, scrollAmountClients, scrollBackClients)))}
+                    // onTouchEnd={() => (animationFrameClients.current = requestAnimationFrame(() =>
+                    //     scrollContent(cardContainerRef, animationFrameClients, scrollAmountClients, scrollBackClients)))}
 
                     ref={cardContainerRef}
                 >
@@ -127,8 +127,8 @@ const Projects = () => {
                     onMouseLeave={() => (animationFrameTestimonials.current = requestAnimationFrame(() =>
                         scrollContent(testimonialContainerRef, animationFrameTestimonials, scrollAmountTestimonials, scrollBackTestimonials)))}
                     onTouchStart={() => cancelAnimationFrame(animationFrameTestimonials.current)}
-                    onTouchEnd={() => (animationFrameTestimonials.current = requestAnimationFrame(() =>
-                        scrollContent(testimonialContainerRef, animationFrameTestimonials, scrollAmountTestimonials, scrollBackTestimonials)))}
+                    // onTouchEnd={() => (animationFrameTestimonials.current = requestAnimationFrame(() =>
+                    //     scrollContent(testimonialContainerRef, animationFrameTestimonials, scrollAmountTestimonials, scrollBackTestimonials)))}
                     ref={testimonialContainerRef}
                 >
                     {pcProjects.map((client, index) => (

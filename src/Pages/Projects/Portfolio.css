@@ -33,11 +33,11 @@
     width: 300px;
     height: fit-content;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, width .5s linear
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width .1s ease
 }
 
 .portfolio-card:hover {
-    width: 500px;
+    width: 350px;
 }
 
 .portfolio-card img {

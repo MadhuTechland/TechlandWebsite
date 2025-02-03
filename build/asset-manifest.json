@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4792aea.css",
-    "main.js": "/static/js/main.56fbe026.js",
+    "main.css": "/static/css/main.eb353180.css",
+    "main.js": "/static/js/main.cabe6398.js",
     "static/js/453.98eb82f8.chunk.js": "/static/js/453.98eb82f8.chunk.js",
     "static/media/trustlab.png": "/static/media/trustlab.f5ef5e114ae4f84c5258.png",
     "static/media/project5.png": "/static/media/project5.a6177833ef9c2c8ca3cf.png",
@@ -21,6 +21,7 @@
     "static/media/aboutus.mp4": "/static/media/aboutus.f08c18b387ee741aaba9.mp4",
     "static/media/ourvision.mp4": "/static/media/ourvision.4248b9f6e212bc6c85f5.mp4",
     "static/media/ecommerce-custom-web-banner.webp": "/static/media/ecommerce-custom-web-banner.7733dd53ed7c48be760e.webp",
+    "static/media/image.png": "/static/media/image.c57c633deaff99e0cff6.png",
     "static/media/StaffingServices.png": "/static/media/StaffingServices.badf93bf6ce0c149b44d.png",
     "static/media/trustlabsLogo.png": "/static/media/trustlabsLogo.1bc71ad4ef0c5c255288.png",
     "static/media/webdev.jpg": "/static/media/webdev.3e92a620970be4b21a4c.jpg",
@@ -30,12 +31,12 @@
     "static/media/UIUX.png": "/static/media/UIUX.838ade5a917c9884d910.png",
     "static/media/outin.png": "/static/media/outin.a73f6e6da9cf5b40b350.png",
     "index.html": "/index.html",
-    "main.a4792aea.css.map": "/static/css/main.a4792aea.css.map",
-    "main.56fbe026.js.map": "/static/js/main.56fbe026.js.map",
+    "main.eb353180.css.map": "/static/css/main.eb353180.css.map",
+    "main.cabe6398.js.map": "/static/js/main.cabe6398.js.map",
     "453.98eb82f8.chunk.js.map": "/static/js/453.98eb82f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4792aea.css",
-    "static/js/main.56fbe026.js"
+    "static/css/main.eb353180.css",
+    "static/js/main.cabe6398.js"
   ]
 }

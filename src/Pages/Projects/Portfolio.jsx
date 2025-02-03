@@ -1,187 +1,174 @@
-import React, { useEffect, useState, useRef, useCallback, useMemo } from "react";
-import "./Portfolio.css";
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import './Portfolio.css'; // Import the updated CSS file
+
 import pcImg1 from '../../Components/Assets/techland.png';
 import pcImg2 from '../../Components/Assets/trustlab.png';
 import pcImg3 from '../../Components/Assets/salespulse.png';
-import phoneImg1 from '../../Components/Assets/Projectimg/project1.png'
-import phoneImg2 from '../../Components/Assets/Projectimg/project2.png'
-import phoneImg3 from '../../Components/Assets/Projectimg/project3.png'
-import phoneImg4 from '../../Components/Assets/Projectimg/project4.png'
-import phoneImg5 from '../../Components/Assets/Projectimg/project5.png'
-import phoneImg6 from '../../Components/Assets/Projectimg/project6.png'
-import phoneImg7 from '../../Components/Assets/Projectimg/project7.png'
+import phoneImg1 from '../../Components/Assets/Projectimg/project1.png';
+import phoneImg2 from '../../Components/Assets/Projectimg/project2.png';
+import phoneImg3 from '../../Components/Assets/Projectimg/project3.png';
 
 const Portfolio = () => {
     const [counts, setCounts] = useState([0, 0, 0, 0]);
-    const [selectedCategory, setSelectedCategory] = useState("All");
-    const ref = useRef(null);
-    const isVisible = useRef(false);
+    const [animationTriggered, setAnimationTriggered] = useState(false);
+    const statsRef = useRef(null);
 
-    const projectStats = useMemo(() => {
-        return [
-            { label: "Mobile Apps Delivered", value: 156 },
-            { label: "Web Development Projects", value: 94 },
-            { label: "Digital Marketing Campaigns", value: 52 },
-            { label: "Global Clients Served", value: 350 },
+    const projects = {
+        mobile: [
+            {
+                title: "Health & Fitness App",
+                description: "A comprehensive fitness tracking solution that helps users maintain their health goals.",
+                images: [phoneImg1, phoneImg2, phoneImg3],
+                category: "mobile"
+            },
+            {
+                title: "Social Network",
+                description: "A next-generation social platform that connects people through shared interests and experiences.",
+                images: [phoneImg1, phoneImg2, phoneImg3],
+                category: "mobile"
+            },
+            {
+                title: "Food Delivery",
+                description: "An innovative food delivery platform connecting local restaurants with hungry customers.",
+                images: [phoneImg1, phoneImg2, phoneImg3],
+                category: "mobile"
+            }
+        ],
+        web: [
+            {
+                title: "E-commerce Platform",
+                description: "A scalable e-commerce solution with advanced features including inventory management.",
+                images: [pcImg1, pcImg2, pcImg3],
+                category: "web"
+            },
+            {
+                title: "Learning Management",
+                description: "A comprehensive educational platform designed for modern learning.",
+                images: [pcImg1, pcImg2, pcImg3],
+                category: "web"
+            },
+            {
+                title: "Analytics Dashboard",
+                description: "A powerful business intelligence tool providing real-time insights and data visualization.",
+                images: [pcImg1, pcImg2, pcImg3],
+                category: "web"
+            }
         ]
-    }, []);
+    };
 
-    const portfolioProjects = [
-        {
-            title: "E-Commerce Website",
-            description: "A responsive and feature-rich online store built for scalability.",
-            images: [pcImg1, pcImg2],
-            category: "Web Development",
-        },
-        {
-            title: "Mobile  App",
-            description: "A secure and user-friendly mobile banking solution.",
-            images: [phoneImg1, phoneImg2, phoneImg3, phoneImg4, phoneImg5, phoneImg6, phoneImg7],
-            category: "Mobile App Development",
-        },
-        {
-            title: "Digital Marketing Campaign",
-            description: "A successful campaign that boosted client reach by 200%.",
-            images: [pcImg3, pcImg1],
-            category: "Digital Marketing",
-        },
+    const stats = useRef([
+        { label: "Mobile Apps", value: 156, icon: <i class="fa-solid fa-mobile-screen"></i> },
+        { label: "Websites", value: 94, icon: <i class="fa-solid fa-globe"></i> },
+        { label: "Projects", value: 52, icon: <i class="fa-solid fa-laptop-code"></i> },
+        { label: "Happy Clients", value: 350, icon: <i class="fa-solid fa-user-group"></i> }
+    ]);
 
-        {
-            title: "Food Delivery App",
-            description: "A seamless food delivery solution for restaurants and users.",
-            images: [phoneImg4, phoneImg5, phoneImg6, phoneImg7],
-            category: "Mobile App Development",
-        },
-    ];
+    const [activeImageIndices, setActiveImageIndices] = useState({
+        mobile: Array(projects.mobile.length).fill(0),
+        web: Array(projects.web.length).fill(0),
+    });
 
-    const categories = ["All", "Web Development", "Mobile App Development", "Digital Marketing"];
-    const animateCounts = useCallback(() => {
-        projectStats.forEach((stat, index) => {
-            const increment = Math.ceil(stat.value / 100);
-            let current = 0;
-
+    const animateStats = useCallback(() => {
+        stats.current.forEach((stat, index) => {
+            let start = 0;
+            const increment = Math.ceil(stat.value / 50);
             const timer = setInterval(() => {
-                current += increment;
-                if (current >= stat.value) {
-                    current = stat.value;
+                start += increment;
+                if (start >= stat.value) {
+                    start = stat.value;
                     clearInterval(timer);
                 }
-
-                setCounts((prevCounts) => {
-                    const updatedCounts = [...prevCounts];
-                    updatedCounts[index] = current;
-                    return updatedCounts;
+                setCounts(prevCounts => {
+                    const newCounts = [...prevCounts];
+                    newCounts[index] = start;
+                    return newCounts;
                 });
-            }, 20);
+            }, 40);
         });
-    }, [projectStats]);
+    }, [stats]);
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                const entry = entries[0];
-                if (entry.isIntersecting && !isVisible.current) {
-                    isVisible.current = true;
-                    animateCounts();
+                const [entry] = entries;
+                if (entry.isIntersecting && !animationTriggered) {
+                    setAnimationTriggered(true);
+                    animateStats();
                 }
             },
             { threshold: 0.5 }
         );
 
-        if (ref.current) observer.observe(ref.current);
+        if (statsRef.current) {
+            observer.observe(statsRef.current);
+        }
 
-        return () => observer.disconnect();
-    }, [animateCounts]);
+        return () => {
+            if (statsRef.current) {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
+                observer.unobserve(statsRef.current);
+            }
+        };
+    }, [animateStats, animationTriggered]);
 
-
-
-    const filteredProjects =
-        selectedCategory === "All"
-            ? portfolioProjects
-            : portfolioProjects.filter((project) => project.category === selectedCategory);
-
-    const [currentImageIndices, setCurrentImageIndices] = useState({});
-
-
-
-
-    const handleNextImage = (projectIndex, images) => {
-        setCurrentImageIndices((prevIndices) => ({
-            ...prevIndices,
-            [projectIndex]: (prevIndices[projectIndex] + 1 || 1) % images.length,
-        }));
+    // Carousel navigation functions for each project
+    const goToNextImage = (category, index) => {
+        setActiveImageIndices(prevIndices => {
+            const newIndices = { ...prevIndices };
+            newIndices[category][index] = (newIndices[category][index] + 1) % projects[category][index].images.length;
+            return newIndices;
+        });
     };
 
-    const handlePrevImage = (projectIndex, images) => {
-        setCurrentImageIndices((prevIndices) => ({
-            ...prevIndices,
-            [projectIndex]: (prevIndices[projectIndex] - 1 + images.length || images.length - 1) % images.length,
-        }));
+    const goToPrevImage = (category, index) => {
+        setActiveImageIndices(prevIndices => {
+            const newIndices = { ...prevIndices };
+            newIndices[category][index] = (newIndices[category][index] - 1 + projects[category][index].images.length) % projects[category][index].images.length;
+            return newIndices;
+        });
     };
-    return (
-        <section className="portfolio-container">
-            {/* Portfolio Section */}
-            <div className="portfolio-header">
-                <h1>Our Work Speaks Volumes</h1>
-                <p>At Techland IT Solutions, we take pride in our track record of delivering innovative and impactful solutions across multiple industries. Each project we undertake reflects our commitment to excellence and our dedication to helping businesses thrive in the digital age. Below are some of the successful projects we've delivered:</p>
-            </div>
 
-            {/* Categories */}
-            <div className="portfolio-categories">
-                {categories.map((category) => (
-                    <button
-                        key={category}
-                        className={`portfolio-category-btn ${selectedCategory === category ? "active" : ""
-                            }`}
-                        onClick={() => setSelectedCategory(category)}
-                    >
-                        {category}
-                    </button>
-                ))}
-            </div>
-
-            {/* Project Cards */}
-            <div className="portfolio-projects">
-                {filteredProjects.map((project, projectIndex) => (
-                    <div key={projectIndex} className="portfolio-card">
-                        <div className="carousel-container">
-                            <button
-                                onClick={() =>
-                                    handlePrevImage(projectIndex, project.images)
-                                }
-                                className="carousel-btn"
-                            >
-                                &#10094;
+    const renderProjectSection = ({ title, items, category, isMobile = false }) => (
+        <div className="project-section">
+            <h2>{title}</h2>
+            <div className="project-items">
+                {items.map((project, index) => (
+                    <div key={index} className={`project-item ${index % 2 === 0 ? " " : 'reversed'}`}>
+                        <div className={`project-image-wrapper ${isMobile ? 'mobile' : ''}  `}>
+                            <button className="carousel-btn prev" onClick={() => goToPrevImage(category, index)}>
+                                &#8592;
                             </button>
                             <img
-                                src={
-                                    project.images[
-                                    currentImageIndices[projectIndex] || 0
-                                    ]
-                                }
-                                alt={`${project.title} ${currentImageIndices[projectIndex] || 0
-                                    }`}
-                                className="carousel-image"
+                                src={project.images[activeImageIndices[category][index]]}
+                                alt={`${project.title}`}
                             />
-                            <button
-                                onClick={() =>
-                                    handleNextImage(projectIndex, project.images)
-                                }
-                                className="carousel-btn"
-                            >
-                                &#10095;
+                            <button className="carousel-btn next" onClick={() => goToNextImage(category, index)}>
+                                &#8594;
                             </button>
                         </div>
-                        <div className="portfolio-card-content">
-                            <h2>{project.title}</h2>
+                        <div className={`project-info-wrapper ${isMobile ? 'mobile' : ''}`}>
+                            <h3>{project.title}</h3>
                             <p>{project.description}</p>
+                            <button>View Project</button>
                         </div>
                     </div>
                 ))}
             </div>
+        </div>
+    );
 
+    return (
+        <div className="main-container">
+            <div className="header-section">
+                <h1>Our Work Portfolio</h1>
+                <p>We create beautiful digital experiences that help businesses grow and succeed in the modern world.</p>
+            </div>
+
+            {renderProjectSection({ title: "Mobile Applications", items: projects.mobile, category: "mobile", isMobile: true })}
+            {renderProjectSection({ title: "Web Projects", items: projects.web, category: "web", reversed: true })}
 
             {/* Project Completion Section */}
-            <div className="project-container" ref={ref}>
+            <div className="project-container" ref={statsRef}>
                 <div className="project-header">
                     <h1>Project Milestones</h1>
                     <p>
@@ -190,15 +177,16 @@ const Portfolio = () => {
                     </p>
                 </div>
                 <div className="project-stats">
-                    {projectStats.map((stat, index) => (
+                    {stats.current.map((stat, index) => (
                         <div key={index} className="project-stat">
+                            {stat.icon}
                             <h2>{counts[index]}+</h2>
                             <p>{stat.label}</p>
                         </div>
                     ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

@@ -87,6 +87,12 @@
     max-width: 800px;
     min-width: 500px;
     text-align: center;
+    display: flex;
+}
+
+.testimonial-card img {
+    height: 80px;
+    border-radius: 25%;
 }
 
 .testimonial-grid {

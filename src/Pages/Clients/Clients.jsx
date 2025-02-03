@@ -1,6 +1,7 @@
 import React from 'react';
 import './Clients.css';
 import { useEffect, useRef, useCallback } from "react";
+import person from '../../Components/Assets//person.jpg'
 import trustlabs from '../../Components/Assets/trustlabsLogo.png';
 
 const Clients = () => {
@@ -129,9 +130,12 @@ const Clients = () => {
 						ref={testimonialContainerRef}
 					>
 						{testimonials.map((testimonial, index) => (
-							<div key={index} className="testimonial-card">
-								<p className="testimonial-feedback">“{testimonial.feedback}”</p>
-								<p className="testimonial-client">- {testimonial.client}</p>
+							<div className="testimonial-card">
+								<img src={person} alt="" />
+								<div key={index}>
+									<p className="testimonial-feedback">“{testimonial.feedback}”</p>
+									<p className="testimonial-client">- {testimonial.client}</p>
+								</div>
 							</div>
 						))}
 					</div>

@@ -21,9 +21,9 @@ body {
 
   color: #202124;
   /* Dark gray for professional text contrast */
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   /* Clean, modern typography */
-
+  user-select: none;
 
 }
 
@@ -94,4 +94,8 @@ body::-webkit-scrollbar-thumb {
 /* Scrollbar thumb on hover */
 body::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+video {
+  pointer-events: none;
 }

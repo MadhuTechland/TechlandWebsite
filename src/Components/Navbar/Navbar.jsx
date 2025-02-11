@@ -11,8 +11,8 @@ const Navbar = () => {
 
   useEffect(() => {
     if (showgetQuote) {
-      window.scrollTo(0, 0);
-      document.body.scrollTo(0, 0)
+      window.scrollTo({ top: 0, behavior: "smooth" });;
+      document.body.scrollTo({ top: 0, behavior: "smooth" });
       document.body.style.overflow = "hidden";
     } else document.body.style.overflow = "";
 
@@ -20,8 +20,8 @@ const Navbar = () => {
   }, [showgetQuote]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: "smooth" });;
+    document.body.scrollTo({ top: 0, behavior: "smooth" });
     setIsMenuOpen(false)
   }, [scrolltoTop]);
 

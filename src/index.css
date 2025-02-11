@@ -23,7 +23,7 @@ body {
   /* Dark gray for professional text contrast */
   font-family: 'Poppins', sans-serif !important;
   /* Clean, modern typography */
-  user-select: none;
+  /* user-select: none; */
 
 }
 

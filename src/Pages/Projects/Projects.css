@@ -29,6 +29,7 @@
     padding: 2rem 0.5rem;
     width: 100%;
     position: relative;
+    justify-content: space-evenly;
 }
 
 .project-grid::-webkit-scrollbar {
@@ -58,7 +59,7 @@
 }
 
 .project-logo-moblie {
-    width: 130px;
+    width: 200px;
     height: auto;
     margin-bottom: 10px;
     display: block;
@@ -85,7 +86,7 @@
 }
 
 .project-card:hover .project-logo-moblie {
-    width: 200px;
+    width: 250px;
 }
 
 .project-logo-pc {

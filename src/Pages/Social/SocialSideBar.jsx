@@ -6,7 +6,7 @@ const SocialSideBar = () => {
   return (
 
     <div className="socialredes">
-      <a className="sociallinkedin" href="https://www.linkedin.com/company/techland-it-solutions/">
+      <a className="sociallinkedin" target='_blank' rel="noreferrer" href="https://www.linkedin.com/company/techland-it-solutions/">
         <svg
           viewBox="0 0 448 512"
           width="25px"
@@ -17,7 +17,7 @@ const SocialSideBar = () => {
           ></path>
         </svg>
       </a>
-      <a className="socialwhatsapp" href={`https://wa.me/917842385604?text=${encodeURI("Hi Techland, \nI'm inquiring about the website development and mobile app development")}`}>
+      <a className="socialwhatsapp" target='_blank' rel="noreferrer" href={`https://wa.me/917842385604?text=${encodeURI("Hi Techland, \nI'm inquiring about the website development and mobile app development")}`}>
         <svg
           className="socialicon icons8-Facebook-Filled"
           viewBox="0 0 16 16"
@@ -31,7 +31,7 @@ const SocialSideBar = () => {
         </svg>
       </a>
 
-      <a className="socialphone" href="tel:+917842385604">
+      <a className="socialphone" target='_blank' rel="noreferrer" href="tel:+917842385604">
         <svg
           className="socialicon icons8-Facebook-Filled"
           width="32" viewBox="0 0 32 32" height="32" fill="none"
@@ -42,7 +42,7 @@ const SocialSideBar = () => {
         </svg>
       </a>
 
-      {/* <a className="socialtwitter" href="https://twitter.com/your-profile">
+      {/* <a className="socialtwitter" target='_blank' rel="noreferrer" href="https://twitter.com/your-profile">
         <svg
           fill="white"
           className="socialsvgIcon"
@@ -59,7 +59,7 @@ const SocialSideBar = () => {
 
 
 
-      <a className="socialinsta" href="https://www.instagram.com/techlanditsolutions?igsh=MW1hemQ4YngxMWQ2aQ=="
+      <a className="socialinsta" target='_blank' rel="noreferrer" href="https://www.instagram.com/techlanditsolutions?igsh=MW1hemQ4YngxMWQ2aQ=="
       ><svg
         height="25px"
         width="25px"

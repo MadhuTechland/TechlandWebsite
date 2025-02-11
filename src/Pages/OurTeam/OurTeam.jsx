@@ -1,45 +1,46 @@
 import React from "react";
 import "./OurTeam.css";
-import personImg from '../../Components/Assets/person.jpg'
+import personImg2 from '../../Components/Assets/Personimg/cto.png'
+import personImg from '../../Components/Assets/Personimg/ceo.png'
 
 const OurTeam = () => {
     const team = [
         {
-            name: "John Doe",
+            name: "Madhu Kadali",
             role: "CEO & Founder",
             image: personImg,
             social: {
-                linkedin: "https://linkedin.com/in/johndoe",
-                twitter: "https://twitter.com/johndoe",
+                linkedin: "https://www.linkedin.com/in/madhu-kadali-31992122b/",
+
             },
         },
         {
-            name: "Jane Smith",
-            role: "Project Manager",
-            image: personImg,
+            name: "Vara Prasad",
+            role: "Managing Director",
+            image: personImg2,
             social: {
-                linkedin: "https://linkedin.com/in/janesmith",
-                twitter: "https://twitter.com/janesmith",
+                linkedin: "https://www.linkedin.com/company/techland-it-solutions/",
+
             },
         },
-        {
-            name: "Michael Johnson",
-            role: "Lead Developer",
-            image: personImg,
-            social: {
-                linkedin: "https://linkedin.com/in/michaeljohnson",
-                twitter: "https://twitter.com/michaeljohnson",
-            },
-        },
-        {
-            name: "Emily Davis",
-            role: "UI/UX Designer",
-            image: personImg,
-            social: {
-                linkedin: "https://linkedin.com/in/emilydavis",
-                twitter: "https://twitter.com/emilydavis",
-            },
-        },
+        // {
+        //     name: "Michael Johnson",
+        //     role: "Lead Developer",
+        //     image: personImg,
+        //     social: {
+        //         linkedin: "https://linkedin.com/in/michaeljohnson",
+        //         twitter: "https://twitter.com/michaeljohnson",
+        //     },
+        // },
+        // {
+        //     name: "Emily Davis",
+        //     role: "UI/UX Designer",
+        //     image: personImg,
+        //     social: {
+        //         linkedin: "https://linkedin.com/in/emilydavis",
+        //         twitter: "https://twitter.com/emilydavis",
+        //     },
+        // },
     ];
 
     return (

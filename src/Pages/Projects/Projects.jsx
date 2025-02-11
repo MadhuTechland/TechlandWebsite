@@ -1,43 +1,39 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import "./Projects.css";
-import phoneImg1 from '../../Components/Assets/Projectimg/project1.png'
-import phoneImg2 from '../../Components/Assets/Projectimg/project2.png'
-import phoneImg3 from '../../Components/Assets/Projectimg/project3.png'
-import phoneImg4 from '../../Components/Assets/Projectimg/project4.png'
-import phoneImg5 from '../../Components/Assets/Projectimg/project5.png'
-import phoneImg6 from '../../Components/Assets/Projectimg/project6.png'
-import phoneImg7 from '../../Components/Assets/Projectimg/project7.png'
+import nudeal from '../../Components/Assets/Projectimg/nudeal.png'
+import meato from '../../Components/Assets/Projectimg/meato.png'
+import sapid from '../../Components/Assets/Projectimg/sapid.png'
+import templecity from '../../Components/Assets/Projectimg/templecity.png'
 
 
-import pcImg1 from '../../Components/Assets/techland.png'
-import pcImg2 from '../../Components/Assets/trustlab.png'
-import pcImg3 from '../../Components/Assets/salespulse.png'
+import abhisreeweb from '../../Components/Assets/Projectimg/abhisreeweb.png';
+import cashexbiteboxweb from '../../Components/Assets/Projectimg/cashexbiteboxweb.png';
+import cashexweb from '../../Components/Assets/Projectimg/cashexweb.png';
+import meatoweb from '../../Components/Assets/Projectimg/meatoweb.jpeg';
+import nudealweb from '../../Components/Assets/Projectimg/nudealweb.png';
+import templecityweb from '../../Components/Assets/Projectimg/templecityweb.png';
+import workoasisweb from '../../Components/Assets/Projectimg/workoasisweb.png';
 
 
 const Projects = () => {
     const moblieProjects = [
-        { name: "Trust Labs", logo: phoneImg1, },
-        { name: "Client Two", logo: phoneImg2, },
-        { name: "Client Three", logo: phoneImg3, },
-        { name: "Client Four", logo: phoneImg4, },
-        { name: "Trust Labs", logo: phoneImg5, },
-        { name: "Client Two", logo: phoneImg6, },
-        { name: "Client Three", logo: phoneImg7, },
+
+
+        { name: "Nudeal", logo: nudeal, },
+        { name: "Meat O", logo: meato, },
+        { name: "Sapid", logo: sapid, },
+        { name: "Temple City", logo: templecity, },
 
     ];
     const pcProjects = [
-        { name: "Trust Labs", logo: pcImg1, },
-        { name: "Client Two", logo: pcImg2, },
-        { name: "Client Three", logo: pcImg3, },
-        { name: "Client Four", logo: pcImg1, },
-        { name: "Trust Labs", logo: pcImg2, },
-        { name: "Client Two", logo: pcImg3, },
-        { name: "Client Three", logo: pcImg1, },
-        { name: "Client Four", logo: pcImg2, },
-        { name: "Trust Labs", logo: pcImg3, },
-        { name: "Client Two", logo: pcImg1, },
-        { name: "Client Three", logo: pcImg2, },
-        { name: "Client Four", logo: pcImg3, },
+        { name: "Abhisree foundation", logo: abhisreeweb, },
+        { name: "Bitebox ", logo: cashexbiteboxweb, },
+        { name: "Cashex ", logo: cashexweb, },
+        { name: "Meato", logo: meatoweb, },
+        { name: "Nudeal", logo: nudealweb, },
+        { name: "Temple city", logo: templecityweb, },
+        { name: "Work Oasis", logo: workoasisweb, },
+
     ];
 
 

@@ -142,7 +142,7 @@
 
 .project-stat {
     background-color: #fff;
-    color: #0d6efd;
+    color: #2a31a7;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -193,7 +193,7 @@
     }
 
     .project-item.reversed {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .project-image-wrapper img {
@@ -302,7 +302,8 @@
 
 
     .project-image-wrapper.mobile img {
-        height: 400px !important;
+        height: 300px !important;
+        width: 100%;
     }
 
 }
@@ -345,4 +346,9 @@
 
 .carousel-btn.next {
     right: 10px;
+}
+
+.project-stat i {
+    font-size: 3rem;
+    margin: .5rem auto;
 }

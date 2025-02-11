@@ -244,7 +244,7 @@
 
 .intro-container button:hover .intro-circle .intro-icon.intro-arrow {
   background: #fff;
-  transform: translate(8.7rem, 0);
+  transform: translate(9.5rem, 0);
 }
 
 .intro-container button:active .intro-circle .intro-icon.intro-arrow {

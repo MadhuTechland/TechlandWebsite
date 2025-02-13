@@ -9,7 +9,7 @@ import news_local from '../../Components/Assets/logo/news_local.png'
 import nudeal from '../../Components/Assets/logo/nudeal.jpeg'
 import sapid from '../../Components/Assets/logo/sapid.png'
 import workoasis from '../../Components/Assets/logo/workoasis.webp'
-import trustlabs from '../../Components/Assets/trustlabsLogo.png';
+import trustlabs from '../../Components/Assets/logo/trustlabsLogo.png';
 
 const Clients = () => {
 	const clients = [

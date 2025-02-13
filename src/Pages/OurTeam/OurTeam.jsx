@@ -1,7 +1,7 @@
 import React from "react";
 import "./OurTeam.css";
-import personImg2 from '../../Components/Assets/Personimg/cto.png'
-import personImg from '../../Components/Assets/Personimg/ceo.png'
+import personImg2 from '../../Components/Assets/Personimg/varaprasadimg.png'
+import personImg from '../../Components/Assets/Personimg/madhuimg.png'
 
 const OurTeam = () => {
     const team = [
